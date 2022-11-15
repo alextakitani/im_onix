@@ -18,7 +18,7 @@ module ONIX
     elements "Measure", :subset, :cardinality => 0..n
     element "NumberOfItemsOfThisForm", :integer, :cardinality => 0..1
     element "NumberOfCopies", :integer, :cardinality => 0..1
-    element "CountryOfManufacture", :subset, :cardinality => 0..1
+    element "CountryOfManufacture", :subset, :klass=>"CountryCode", :cardinality => 0..1
 
     def file_formats
       @product_form_details.select { |fd| fd.code =~ /^E1.*/ }
