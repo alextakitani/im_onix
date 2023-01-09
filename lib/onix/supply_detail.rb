@@ -42,7 +42,7 @@ module ONIX
     # is supply available ?
     # @return [Boolean]
     def available?
-      ["Available", "NotYetAvailable", "InStock", "ToOrder", "Pod"].include?(@product_availability.human)
+      ["Available", "InStock", "ToOrder", "Pod"].include?(@product_availability.human)
     end
 
     # does supply can be sold separately ?
